@@ -118,6 +118,7 @@ const App = () => {
   const [color, setColor] = useState(colors[6])
   
   useEffect(() => {
+    let fetchWorking = true
     fetch("https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json")
       .then(res => {
         if (res.ok) {
@@ -133,9 +134,11 @@ const App = () => {
         const randomIndex = Math.floor(Math.random() * data.quotes.length)
         setQuote(data.quotes[randomIndex])
       })
-      .catch(error => {
+      .catch(e => {
+        console.error(e)
         setError(true)
       })
+      return () => fetchWorking = false
   }, [getNewQuote])
 
   const handleClick = () => {
