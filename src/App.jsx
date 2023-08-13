@@ -119,25 +119,27 @@ const App = () => {
   
   useEffect(() => {
     let fetchWorking = true
-    fetch("https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json")
-      .then(res => {
-        if (res.ok) {
-          setError(false)
-          setLoading(false)
-          return res.json()
-        } else {
-          setLoading(false)
-          throw Error("error")
-        }
-      })
-      .then(data => {
-        const randomIndex = Math.floor(Math.random() * data.quotes.length)
-        setQuote(data.quotes[randomIndex])
-      })
-      .catch(e => {
-        console.error(e)
-        setError(true)
-      })
+    if (fetchWorking) {
+      fetch("https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json")
+        .then(res => {
+          if (res.ok) {
+            setError(false)
+            setLoading(false)
+            return res.json()
+          } else {
+            setLoading(false)
+            throw Error("error")
+          }
+        })
+        .then(data => {
+          const randomIndex = Math.floor(Math.random() * data.quotes.length)
+          setQuote(data.quotes[randomIndex])
+        })
+        .catch(e => {
+          console.error(e)
+          setError(true)
+        })
+    }
       return () => fetchWorking = false
   }, [getNewQuote])
 
