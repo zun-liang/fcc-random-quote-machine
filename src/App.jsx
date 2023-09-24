@@ -9,6 +9,7 @@ import Loading from "./components/Loading";
 import { CommonContainer } from "./styles/styles";
 
 const Container = styled(CommonContainer)`
+  height: var(--app-height);
   gap: 0;
   background-color: ${(props) => props.color};
 `;
@@ -131,6 +132,17 @@ const App = () => {
     "#27ae60",
   ];
   const [color, setColor] = useState(colors[6]);
+
+  const setAppHeight = () => {
+    const doc = document.documentElement;
+    doc.style.setProperty("--app-height", `${window.innerHeight}px`);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", setAppHeight);
+    setAppHeight();
+    return () => window.removeEventListener("resize", setAppHeight);
+  }, []);
 
   useEffect(() => {
     let fetchWorking = true;
