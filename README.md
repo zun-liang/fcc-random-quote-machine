@@ -1,6 +1,6 @@
 # freeCodeCamp - Random Quote Machine Solution
 
-This is a solution to the [Build a Random Quote Machine challenge on freeCodeCamp](https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-random-quote-machine). 
+This is a solution to the [Build a Random Quote Machine challenge on freeCodeCamp](https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-random-quote-machine).
 
 ## Table of contents
 
@@ -15,7 +15,6 @@ This is a solution to the [Build a Random Quote Machine challenge on freeCodeCam
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-
 ## Overview
 
 ### The challenge
@@ -28,6 +27,7 @@ Users should be able to:
 - Share quotes to Twitter and Tumblr
 
 ### Screenshot
+
 <table>
   <tr>
     <td>
@@ -43,7 +43,6 @@ Users should be able to:
   </tr>
 </table>
 
-
 ### Links
 
 - Live Site URL: [here](https://zun-liang.github.io/fcc-random-quote-machine/)
@@ -58,7 +57,6 @@ Users should be able to:
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Styled Components](https://styled-components.com/) - For styles
-
 
 ### What I learned
 
@@ -80,7 +78,7 @@ Users should be able to:
 
 ## Author
 
-- Website - [Zun Liang](https://zun-liang.github.io/)
+- Website - [Zun Liang](https://zunldev.com/)
+- GitHub - [@zun-liang](https://github.com/zun-liang)
 - Frontend Mentor - [@zun-liang](https://www.frontendmentor.io/profile/zun-liang)
-
-
+- freeCodeCamp - [@zun-liang](https://www.freecodecamp.org/zun-liang)
